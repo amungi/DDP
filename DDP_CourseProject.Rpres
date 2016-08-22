@@ -1,0 +1,49 @@
+Developing Data Products: Course Project
+========================================================
+author: Ashish Mungi
+date: 21-August-2016
+autosize: true
+
+mtcars Data Explorer: Overview
+========================================================
+
+The **mtcars Data Explorer** application is created for the course project: **Coursera - Developing Data Products** by **Ashish Mungi**.
+
+It consists of two files: ui.R and server.R
+
+The application can be used for an analysis of the `mtcars` dataset in R, which has 32 observations of 11 variables.
+
+The application is deployed on shinyapps.io:  
+https://amungi.shinyapps.io/DDP_CourseProject/
+
+The source code is on Github: https://github.com/amungi/DDP
+
+
+The Application has Three Interactive Tabs
+========================================================
+
+## Raw Data
+
+The **Raw Data** tab lists the raw data from the `mtcars` dataset in a table format. Each variable is listed in a column, which can be sorted.
+
+## Summary
+
+The Summary tab displays the summary of the `mtcars` dataset.
+
+## Regression
+
+The Regression tab can be used to explore the regression output of Miles Per Gallon (mpg) as the output, with a combination of different predictors (am, wt, qsec, cyl). The reactive output changes based on the user input (in selecting or deselecting the checkboxes).
+
+summary(mtcars)
+========================================================
+
+```{r echo=FALSE}
+summary(mtcars)
+```
+
+summary(lm(mpg ~ ., data = mtcars))$coef
+========================================================
+
+```{r echo=FALSE}
+summary(lm(mpg ~ ., data = mtcars))$coef
+```
